@@ -20,7 +20,7 @@ function runPolling(generator = pollForWeatherInfo()) {
   const poll = generator.next();
   poll.value
     .then((data) => {
-      if (!data.tempurature) {
+      if (!data.temperature) {
         runPolling(generator);
       } else {
         console.log(data);
