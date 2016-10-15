@@ -7,7 +7,6 @@ function* pollForWeatherInfo() {
   while (true) {
     yield fetch(WEATHER_URL, {
       method: 'GET',
-      // mode: 'no-cors'
     })
     .then((data) => {
       console.log(data);
